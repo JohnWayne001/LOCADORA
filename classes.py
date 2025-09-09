@@ -15,6 +15,7 @@ class Item:
 
 class Filme(Item):
     def __init__(self, codigo, titulo, genero, duracao):
+        super().__init__(codigo, titulo)
         self.__codigo = codigo
         self.__titulo = titulo
         self.__genero = genero

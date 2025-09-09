@@ -10,22 +10,28 @@ def cadastroCliente():
         nome = input("Qual o seu nome?\n-->")
         cpf = int(input("Qual o seu CPF?\n-->"))
 
-def cadastrarFilme():
-    print("CADASTRE SEU FILME")
-    codigo = input("Qual o ID do filme?")
-    titulo = input("Qual o título do filme?")
-    genero = input("Qual o gênero do filme?")
-    duracao = input("Qual a duração do filme em minutos?")
 
-    locSenai.cadastrarFilme(codigo = codigo, titulo = titulo, genero = genero, duracao = duracao)
-    print("Filme cadastrado com sucesso")
+def registrarItem():
+    print("O que você deseja registrar?")
+    registro = int(input("1 - Filme \n2 - Jogo\n-->"))
+    if registro == 1:
+        print("CADASTRE SEU FILME")
+        codigo_filme = input("Qual o ID do filme?\n-->")
+        titulo_filme = input("Qual o título do filme?\n-->")
+        genero_filme = input("Qual o gênero do filme?\n-->")
+        duracao_filme = input("Qual a duração do filme em minutos?\n-->")
 
-def cadastrarJogo():
-    print("CADASTRE SEU JOGO")
-    codigo = input("Qual o ID do jogo?")
-    titulo = input("Qual o título do jogo?")
-    plataforma = input("Qual a plataforma do jogo?")
-    faixaEtaria = input("Qual a faixa etária do jogo?")
-  
-    locSenai.cadastrarJogo(codigo = codigo, titulo = titulo, plataforma = plataforma, faixaEtaria = faixaEtaria)
-    print("Filme cadastrado com sucesso")
+        novo_filme = Item(codigo= codigo_filme, titulo= titulo_filme)
+
+        locSenai.cadastrarItem(codigo = codigo_filme, titulo = titulo_filme, genero = genero_filme, duracao = duracao_filme)
+        print("Filme cadastrado com sucesso")
+
+    elif registro == 2:
+        print("CADASTRE SEU JOGO")
+        codigo_jogo = input("Qual o ID do jogo?\n-->")
+        titulo_jogo = input("Qual o título do jogo?\n-->")
+        plataforma_jogo = input("Qual a plataforma do jogo?\n-->")
+        faixaEtaria_jogo = input("Qual a faixa etária do jogo?\n-->")
+    
+        locSenai.Jogo(codigo = codigo_jogo, titulo = titulo_jogo, plataforma = plataforma_jogo, faixaEtaria = faixaEtaria_jogo)
+        print("Filme cadastrado com sucesso")
