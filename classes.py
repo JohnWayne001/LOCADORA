@@ -60,7 +60,7 @@ class Locadora:
 
     def cadastrarItem(self, item: Item):
         self.__itens.append(item)
-        self.__itens.append(Item)
+
 
     def listarClientes(self):
         for i in self.__clientes:
