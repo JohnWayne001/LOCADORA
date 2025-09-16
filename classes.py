@@ -107,4 +107,4 @@ class Locadora:
         return self.__clientes
 
     def listarItens(self):
-        return self.__itens
+        return self.__itens                                                                                                   
