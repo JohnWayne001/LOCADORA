@@ -16,15 +16,12 @@ class Item:
 class Filme(Item):
     def __init__(self, codigo, titulo, genero, duracao):
         super().__init__(codigo, titulo)
-        self.__codigo = codigo
-        self.__titulo = titulo
         self.__genero = genero
         self.__duracao = duracao
 
 class Jogo(Item):
     def __init__(self, codigo, titulo, plataforma, faixaEtaria):
-        self.__codigo = codigo
-        self.__titulo = titulo
+        super().__init__(codigo, titulo)
         self.__plataforma = plataforma
         self.__faixaEtaria = faixaEtaria
 
